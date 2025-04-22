@@ -1144,18 +1144,18 @@ C  tillage and rainfall kinetic energy
             IF (COARSE(L)) THEN
 !             Coarse soils  --  use DUL10
 !              dDUL_SOM = 0.004966 * dOC - 0.2423 * dBD_SOM
-               dDUL_SOM = -0.222 * dOC + 0.051 * SAND * dOC + 0.085 * CLAY * dOC ![CM 4/22/25]
+               dDUL_SOM = -0.222 * dOC + 0.051 * SAND(L) * dOC + 0.085 * CLAY(L) * dOC ![CM 4/22/25]
 
             ELSE
 !             Other soils -- use DUL33
 !              dDUL_SOM = 0.002208 * dOC - 0.1434 * dBD_SOM 
-               dDUL_SOM = -0.222 * dOC + 0.051 * SAND * dOC + 0.085 * CLAY * dOC ![CM 4/22/25] 
+               dDUL_SOM = -0.222 * dOC + 0.051 * SAND(L) * dOC + 0.085 * CLAY(L) * dOC ![CM 4/22/25] 
             ENDIF
             DUL_SOM(L) = DUL_INIT(L) + dDUL_SOM
 
 !           Lower limit
 !            dLL_SOM = 0.002228 * dOC + 0.02671 * dBD_SOM
-             dLL_SOM = -0.309 * dOC + 0.022 * SAND * dOC + 0.022 * CLAY * dOC ![CM 4/22/25] 
+             dLL_SOM = -0.309 * dOC + 0.022 * SAND(L) * dOC + 0.022 * CLAY(L) * dOC ![CM 4/22/25] 
             LL_SOM(L)  = LL_INIT(L) + dLL_SOM
 
 !            IF (L==1) WRITE(1000,*)dOC, dBD_SOM, dLL_SOM, LL_SOM(1)
