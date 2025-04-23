@@ -1012,6 +1012,8 @@ C  tillage and rainfall kinetic energy
       SOILPROP % SWCN  = SWCN  
       SOILPROP % TOTN  = TOTN
       SOILPROP % TotOrgN=TotOrgN
+      SOILPROP % SAND  = SAND   ![CM 4/23/25]
+      SOILPROP % CLAY  = CLAY   ![CM 4/23/25]
 
 !***********************************************************************
 !***********************************************************************
